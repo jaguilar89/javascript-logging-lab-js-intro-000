@@ -22,7 +22,7 @@ console.error("HELP!")
 
   it('calls console.log()', done => {
     const spy = expect.spyOn(console, 'log').andCallThrough()
-
+console.log("This is a log.")
     jsdom.env(html, [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
     }, (err, window) => {
